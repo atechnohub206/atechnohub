@@ -36,6 +36,14 @@ body {
   overflow-x: hidden;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(26,86,219,0.35);
+  outline-offset: 3px;
+}
+
 /* ── NAV ── */
 nav {
   position: sticky; top: 0; z-index: 100;
@@ -623,6 +631,15 @@ input[type="number"]:focus, input[type="text"]:focus, select:focus {
   .page-hero { padding: 2.5rem 1.25rem 2.25rem; }
   .calc-section { padding: 2.5rem 1.25rem; }
   .result-card { position: static; }
+}
+
+@media (max-width: 420px) {
+  nav { gap: 0.75rem; }
+  .nav-logo { font-size: 1.05rem; }
+  .nav-cta { padding: 0.45rem 0.7rem; font-size: 0.78rem; }
+  .hero-btns { flex-direction: column; align-items: stretch; }
+  .hero-btns a { justify-content: center; }
+  .calc-card, .result-card { padding: 1.35rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
