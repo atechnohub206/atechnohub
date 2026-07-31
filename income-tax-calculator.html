@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Income Tax Calculator Pakistan (FY 2025–26) | ATechno Hub</title>
+<meta name="description" content="Free salary income tax calculator for Pakistan, FY 2025–26. Enter your monthly or annual salary and get your tax, take-home pay and applicable FBR slab instantly." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">A<span>Techno</span> Hub</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="calculators.html" class="active">Calculators</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#areas">Areas</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/923017003354" target="_blank" class="nav-cta">💬 WhatsApp Us</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="sep">/</span>
+    <a href="calculators.html">Calculators</a><span class="sep">/</span>
+    <span class="current">Income Tax</span>
+  </div>
+  <h1>Income Tax Calculator</h1>
+  <p>Estimate your salary income tax for FY 2025–26 using the latest FBR slabs under Section 149.</p>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section">
+  <div class="container calc-layout">
+
+    <div class="calc-card">
+      <h2>Enter Your Salary</h2>
+
+      <div class="toggle-group" id="freqToggle">
+        <button type="button" class="active" data-freq="monthly">Monthly</button>
+        <button type="button" data-freq="annual">Annual</button>
+      </div>
+
+      <div class="form-group">
+        <label for="salaryInput" id="salaryLabel">Monthly Gross Salary (PKR)</label>
+        <input type="number" id="salaryInput" placeholder="e.g. 250000" min="0" />
+        <div class="hint">Enter your total taxable salary before deductions.</div>
+      </div>
+
+      <button class="calc-btn" id="calcBtn">Calculate Tax</button>
+
+      <div class="disclaimer-box">
+        ⚠️ This tool gives an estimate based on standard FBR salary slabs for FY 2025–26 and does not account for tax credits, allowances or exemptions. For an official, detailed calculation visit
+        <a href="https://taxcalculator.pk/" target="_blank" rel="noopener">taxcalculator.pk</a>.
+      </div>
+    </div>
+
+    <div class="result-card">
+      <h2>Your Result</h2>
+      <div class="result-hero">
+        <div class="lbl">Monthly Take-Home Salary</div>
+        <div class="val" id="rTakeHome">PKR 0</div>
+      </div>
+      <div class="result-grid">
+        <div class="result-row"><span class="k">Monthly Tax</span><span class="v" id="rMonthlyTax">PKR 0</span></div>
+        <div class="result-row"><span class="k">Annual Tax</span><span class="v" id="rAnnualTax">PKR 0</span></div>
+        <div class="result-row"><span class="k">Annual Gross Salary</span><span class="v" id="rAnnualGross">PKR 0</span></div>
+        <div class="result-row"><span class="k">Annual Take-Home</span><span class="v" id="rAnnualNet">PKR 0</span></div>
+        <div class="result-row"><span class="k">Effective Tax Rate</span><span class="v" id="rEffRate">0%</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container" style="margin-top:2rem;">
+    <div class="calc-card">
+      <h2>FY 2025–26 Salary Tax Slabs</h2>
+      <table class="slab-table" id="slabTable">
+        <thead>
+          <tr><th>Annual Income</th><th>Tax Rate</th></tr>
+        </thead>
+        <tbody>
+          <tr data-slab="0"><td>Up to PKR 600,000</td><td>0%</td></tr>
+          <tr data-slab="1"><td>PKR 600,000 – 1,200,000</td><td>1% of amount exceeding 600,000</td></tr>
+          <tr data-slab="2"><td>PKR 1,200,000 – 2,200,000</td><td>PKR 6,000 + 11% of amount exceeding 1,200,000</td></tr>
+          <tr data-slab="3"><td>PKR 2,200,000 – 3,200,000</td><td>PKR 116,000 + 23% of amount exceeding 2,200,000</td></tr>
+          <tr data-slab="4"><td>PKR 3,200,000 – 4,100,000</td><td>PKR 446,000 + 30% of amount exceeding 3,200,000</td></tr>
+          <tr data-slab="5"><td>Above PKR 4,100,000</td><td>PKR 616,000 + 35% of amount exceeding 4,100,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="calc-info">
+  <div class="container">
+    <span class="section-label">Good to Know</span>
+    <h2 class="section-title">How This Calculator Works</h2>
+    <div class="calc-info-grid">
+      <div class="info-card">
+        <h3>Progressive Slabs</h3>
+        <p>Pakistan uses a progressive tax system — only the portion of your income within each slab is taxed at that slab's rate.</p>
+      </div>
+      <div class="info-card">
+        <h3>Salary Only</h3>
+        <p>This calculator assumes 100% salary income under Section 149 and doesn't include rental, business or capital gains income.</p>
+      </div>
+      <div class="info-card">
+        <h3>Estimate, Not Filing</h3>
+        <p>Actual tax withheld may differ due to tax credits (e.g. pension fund, Zakat) — always confirm with your payroll or FBR.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section id="contact">
+  <div class="container">
+    <span class="section-label">More Tools</span>
+    <h2 class="section-title">Explore Other Calculators</h2>
+    <p class="section-sub">Plan your pension, retirement savings and SIP investments too.</p>
+    <a href="calculators.html" class="btn-primary" style="font-size:1.05rem; padding:1rem 2.5rem;">🧮 View All Calculators</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <strong style="color:rgba(255,255,255,0.7);">ATechno Hub</strong> — Pumpwala Bazar, Ferozwala Shadara, Lahore, Punjab, Pakistan<br/>
+    📞 <a href="tel:+923017003354">+92 301 700 3354</a> &nbsp;|&nbsp;
+    <a href="index.html">Home</a> &nbsp;|&nbsp;
+    <a href="calculators.html">All Calculators</a><br/><br/>
+    © 2026 ATechno Hub. All rights reserved. Estimates only — not tax advice.
+  </p>
+</footer>
+
+<script src="assets/calc-utils.js"></script>
+<script>
+  const freqBtns = document.querySelectorAll('#freqToggle button');
+  const salaryLabel = document.getElementById('salaryLabel');
+  let freq = 'monthly';
+
+  freqBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      freqBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      freq = btn.dataset.freq;
+      salaryLabel.textContent = freq === 'monthly' ? 'Monthly Gross Salary (PKR)' : 'Annual Gross Salary (PKR)';
+    });
+  });
+
+  const slabs = [
+    { min: 0,        max: 600000,   base: 0,      rate: 0.00 },
+    { min: 600000,   max: 1200000,  base: 0,      rate: 0.01 },
+    { min: 1200000,  max: 2200000,  base: 6000,   rate: 0.11 },
+    { min: 2200000,  max: 3200000,  base: 116000, rate: 0.23 },
+    { min: 3200000,  max: 4100000,  base: 446000, rate: 0.30 },
+    { min: 4100000,  max: Infinity, base: 616000, rate: 0.35 }
+  ];
+
+  function computeTax(annualIncome) {
+    let slabIndex = slabs.findIndex(s => annualIncome > s.min && annualIncome <= s.max);
+    if (annualIncome <= 0) slabIndex = 0;
+    if (slabIndex === -1) slabIndex = slabs.length - 1;
+    const s = slabs[slabIndex];
+    const tax = s.base + Math.max(0, annualIncome - s.min) * s.rate;
+    return { tax, slabIndex };
+  }
+
+  function highlightSlab(index) {
+    document.querySelectorAll('#slabTable tr').forEach(tr => tr.classList.remove('active-slab'));
+    const row = document.querySelector('#slabTable tr[data-slab="' + index + '"]');
+    if (row) row.classList.add('active-slab');
+  }
+
+  function calculate() {
+    const raw = parseFloat(document.getElementById('salaryInput').value) || 0;
+    const annualGross = freq === 'monthly' ? raw * 12 : raw;
+    const { tax: annualTax, slabIndex } = computeTax(annualGross);
+    const monthlyTax = annualTax / 12;
+    const monthlyGross = annualGross / 12;
+    const annualNet = annualGross - annualTax;
+    const monthlyNet = monthlyGross - monthlyTax;
+    const effRate = annualGross > 0 ? (annualTax / annualGross) * 100 : 0;
+
+    document.getElementById('rTakeHome').textContent = pkr(monthlyNet);
+    document.getElementById('rMonthlyTax').textContent = pkr(monthlyTax);
+    document.getElementById('rAnnualTax').textContent = pkr(annualTax);
+    document.getElementById('rAnnualGross').textContent = pkr(annualGross);
+    document.getElementById('rAnnualNet').textContent = pkr(annualNet);
+    document.getElementById('rEffRate').textContent = pct(effRate, 2);
+
+    highlightSlab(slabIndex);
+  }
+
+  document.getElementById('calcBtn').addEventListener('click', calculate);
+  document.getElementById('salaryInput').addEventListener('keyup', e => { if (e.key === 'Enter') calculate(); });
+  calculate();
+</script>
+
+</body>
+</html>

@@ -4,425 +4,21 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>ATechno Hub — Mobile, Printing & Game Services | Ferozwala, Lahore</title>
-<meta name="description" content="ATechno Hub in Pumpwala Bazar, Ferozwala Shadara, Lahore. Mobile, PC & Laptop Accessories, Online Printing Services, Game Installation. Fast. Affordable. Trusted." />
-<meta name="keywords" content="ATechno Hub, mobile accessories Ferozwala, laptop accessories Lahore, online printing Ferozwala, game installation Shadara, PC accessories Pumpwala Bazar" />
+<meta name="description" content="ATechno Hub in Pumpwala Bazar, Ferozwala Shadara, Lahore. Mobile, PC & Laptop Accessories, Online Printing Services, Game Installation, plus free financial calculators. Fast. Affordable. Trusted." />
+<meta name="keywords" content="ATechno Hub, mobile accessories Ferozwala, laptop accessories Lahore, online printing Ferozwala, game installation Shadara, PC accessories Pumpwala Bazar, tax calculator Pakistan, SIP calculator, pension calculator, retirement calculator" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --blue:     #1A56DB;
-    --blue-dk:  #1240A8;
-    --blue-lt:  #EBF2FF;
-    --accent:   #00C27C;
-    --accent-lt:#E6FBF3;
-    --dark:     #0D1117;
-    --dark2:    #161B26;
-    --mid:      #3A3F50;
-    --muted:    #6B7280;
-    --light:    #F4F6FA;
-    --white:    #FFFFFF;
-    --border:   #E5E8EF;
-    --font-display: 'Syne', sans-serif;
-    --font-body:    'Inter', sans-serif;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: var(--font-body);
-    background: var(--white);
-    color: var(--dark);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  /* ── NAV ── */
-  nav {
-    position: sticky; top: 0; z-index: 100;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 2rem;
-    display: flex; align-items: center; justify-content: space-between;
-    height: 64px;
-  }
-  .nav-logo {
-    font-family: var(--font-display);
-    font-weight: 800; font-size: 1.25rem;
-    color: var(--dark);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-  }
-  .nav-logo span { color: var(--blue); }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    font-size: 0.875rem; font-weight: 500;
-    color: var(--mid); text-decoration: none;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--blue); }
-  .nav-cta {
-    background: var(--blue); color: var(--white);
-    padding: 0.5rem 1.25rem; border-radius: 8px;
-    font-size: 0.875rem; font-weight: 600;
-    text-decoration: none; transition: background 0.2s;
-    white-space: nowrap;
-  }
-  .nav-cta:hover { background: var(--blue-dk); }
-
-  /* ── HERO ── */
-  .hero {
-    background: var(--dark);
-    position: relative;
-    overflow: hidden;
-    padding: 6rem 2rem 5rem;
-    text-align: center;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 60% 50% at 20% 50%, rgba(26,86,219,0.25) 0%, transparent 70%),
-      radial-gradient(ellipse 50% 60% at 80% 30%, rgba(0,194,124,0.15) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: rgba(0,194,124,0.15);
-    border: 1px solid rgba(0,194,124,0.35);
-    color: var(--accent);
-    font-size: 0.8rem; font-weight: 600;
-    padding: 0.35rem 0.9rem; border-radius: 999px;
-    letter-spacing: 0.04em; text-transform: uppercase;
-    margin-bottom: 1.5rem;
-  }
-  .hero-eyebrow::before { content: '📍'; font-size: 0.9rem; }
-  .hero h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2.4rem, 6vw, 4.2rem);
-    font-weight: 800;
-    color: var(--white);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin-bottom: 1.25rem;
-    max-width: 780px;
-    margin-left: auto; margin-right: auto;
-  }
-  .hero h1 .highlight {
-    color: transparent;
-    background: linear-gradient(90deg, #1A56DB, #00C27C);
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  .hero-sub {
-    font-size: 1.1rem; color: rgba(255,255,255,0.65);
-    max-width: 520px; margin: 0 auto 2.5rem;
-    line-height: 1.7;
-  }
-  .hero-sub span { color: rgba(255,255,255,0.9); font-weight: 500; }
-  .hero-btns {
-    display: flex; gap: 1rem;
-    justify-content: center; flex-wrap: wrap;
-    margin-bottom: 3.5rem;
-  }
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: var(--accent); color: var(--dark);
-    padding: 0.8rem 1.75rem; border-radius: 10px;
-    font-weight: 700; font-size: 0.95rem;
-    text-decoration: none; transition: transform 0.15s, box-shadow 0.15s;
-    box-shadow: 0 4px 20px rgba(0,194,124,0.35);
-  }
-  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,194,124,0.45); }
-  .btn-secondary {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: var(--white);
-    padding: 0.8rem 1.75rem; border-radius: 10px;
-    font-weight: 600; font-size: 0.95rem;
-    text-decoration: none; transition: background 0.2s;
-  }
-  .btn-secondary:hover { background: rgba(255,255,255,0.14); }
-  .hero-stats {
-    display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
-  }
-  .hero-stat { text-align: center; }
-  .hero-stat .num {
-    font-family: var(--font-display);
-    font-size: 2rem; font-weight: 800;
-    color: var(--white); display: block;
-  }
-  .hero-stat .lbl {
-    font-size: 0.8rem; color: rgba(255,255,255,0.5);
-    text-transform: uppercase; letter-spacing: 0.05em;
-  }
-
-  /* ── TRUST BAR ── */
-  .trust-bar {
-    background: var(--light);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 1rem 2rem;
-    display: flex; align-items: center; justify-content: center;
-    gap: 2.5rem; flex-wrap: wrap;
-  }
-  .trust-item {
-    display: flex; align-items: center; gap: 8px;
-    font-size: 0.85rem; font-weight: 500; color: var(--mid);
-  }
-  .trust-icon { font-size: 1.1rem; }
-
-  /* ── SECTIONS SHARED ── */
-  section { padding: 5rem 2rem; }
-  .container { max-width: 1080px; margin: 0 auto; }
-  .section-label {
-    display: inline-block;
-    font-size: 0.75rem; font-weight: 700;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--blue); margin-bottom: 0.75rem;
-  }
-  .section-title {
-    font-family: var(--font-display);
-    font-size: clamp(1.75rem, 4vw, 2.6rem);
-    font-weight: 800; letter-spacing: -0.02em;
-    color: var(--dark); line-height: 1.15;
-    margin-bottom: 1rem;
-  }
-  .section-sub {
-    font-size: 1rem; color: var(--muted);
-    max-width: 560px; line-height: 1.7;
-    margin-bottom: 3rem;
-  }
-
-  /* ── SERVICES ── */
-  #services { background: var(--white); }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-  .service-card {
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 2rem;
-    transition: box-shadow 0.2s, transform 0.2s;
-    background: var(--white);
-    position: relative; overflow: hidden;
-  }
-  .service-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 3px;
-    border-radius: 16px 16px 0 0;
-  }
-  .service-card.blue::before  { background: var(--blue); }
-  .service-card.green::before { background: var(--accent); }
-  .service-card.purple::before{ background: #7C3AED; }
-  .service-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.09); transform: translateY(-3px); }
-  .service-icon {
-    width: 52px; height: 52px; border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.6rem; margin-bottom: 1.25rem;
-  }
-  .service-icon.blue   { background: var(--blue-lt); }
-  .service-icon.green  { background: var(--accent-lt); }
-  .service-icon.purple { background: #F3EEFF; }
-  .service-card h3 {
-    font-family: var(--font-display);
-    font-size: 1.2rem; font-weight: 700;
-    color: var(--dark); margin-bottom: 0.6rem;
-  }
-  .service-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.25rem; }
-  .service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tag {
-    font-size: 0.75rem; font-weight: 500;
-    padding: 3px 10px; border-radius: 999px;
-    border: 1px solid var(--border);
-    color: var(--mid); background: var(--light);
-  }
-
-  /* ── ABOUT ── */
-  #about { background: var(--light); }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem; align-items: center;
-  }
-  .about-map {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    overflow: hidden;
-    aspect-ratio: 4/3;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    position: relative;
-  }
-  .map-pin-wrap {
-    display: flex; flex-direction: column; align-items: center; gap: 12px;
-  }
-  .map-pin {
-    width: 60px; height: 60px;
-    background: var(--blue); border-radius: 50% 50% 50% 0;
-    transform: rotate(-45deg);
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 8px 24px rgba(26,86,219,0.4);
-  }
-  .map-pin span { transform: rotate(45deg); font-size: 1.5rem; }
-  .map-address {
-    text-align: center;
-    font-size: 0.875rem; color: var(--mid); line-height: 1.6;
-  }
-  .map-address strong { color: var(--dark); display: block; margin-bottom: 4px; }
-  .map-link {
-    display: inline-flex; align-items: center; gap: 6px;
-    margin-top: 12px; font-size: 0.8rem; font-weight: 600;
-    color: var(--blue); text-decoration: none;
-    border: 1px solid var(--blue);
-    padding: 6px 16px; border-radius: 8px;
-    transition: background 0.2s;
-  }
-  .map-link:hover { background: var(--blue-lt); }
-  .about-content .section-sub { margin-bottom: 2rem; }
-  .about-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 2rem; }
-  .about-list li {
-    display: flex; align-items: flex-start; gap: 10px;
-    font-size: 0.9rem; color: var(--mid); line-height: 1.5;
-  }
-  .about-list li::before {
-    content: '✓';
-    flex-shrink: 0;
-    width: 22px; height: 22px;
-    background: var(--accent-lt);
-    color: var(--accent);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.75rem; font-weight: 700;
-    margin-top: 1px;
-  }
-
-  /* ── SERVICE AREAS ── */
-  #areas { background: var(--white); }
-  .areas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-  .area-card {
-    background: var(--light);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1rem 1.25rem;
-    display: flex; align-items: center; gap: 10px;
-    font-size: 0.9rem; font-weight: 500; color: var(--mid);
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .area-card:hover { border-color: var(--blue); color: var(--blue); }
-  .area-dot {
-    width: 8px; height: 8px; border-radius: 50%;
-    background: var(--blue); flex-shrink: 0;
-  }
-  .area-dot.secondary { background: var(--muted); }
-
-  /* ── REVIEWS ── */
-  #reviews { background: var(--light); }
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .review-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.5rem;
-  }
-  .stars { color: #F59E0B; font-size: 1rem; margin-bottom: 0.75rem; }
-  .review-text { font-size: 0.9rem; color: var(--mid); line-height: 1.65; margin-bottom: 1.25rem; }
-  .reviewer { display: flex; align-items: center; gap: 10px; }
-  .reviewer-avatar {
-    width: 36px; height: 36px; border-radius: 50%;
-    background: var(--blue-lt);
-    color: var(--blue);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.8rem; font-weight: 700;
-  }
-  .reviewer-name { font-size: 0.875rem; font-weight: 600; color: var(--dark); }
-  .reviewer-loc  { font-size: 0.75rem; color: var(--muted); }
-
-  /* ── CONTACT / CTA ── */
-  #contact {
-    background: var(--dark);
-    text-align: center;
-    position: relative; overflow: hidden;
-  }
-  #contact::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(26,86,219,0.2) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  #contact .section-label { color: var(--accent); }
-  #contact .section-title { color: var(--white); margin-left: auto; margin-right: auto; max-width: 600px; }
-  #contact .section-sub { color: rgba(255,255,255,0.55); margin-left: auto; margin-right: auto; }
-  .contact-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem; margin-bottom: 2.5rem;
-  }
-  .contact-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 14px;
-    padding: 1.5rem;
-    text-align: center;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-  .contact-card:hover { background: rgba(255,255,255,0.1); }
-  .contact-card-icon { font-size: 1.75rem; margin-bottom: 0.6rem; }
-  .contact-card-label { font-size: 0.75rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
-  .contact-card-value { font-size: 0.95rem; font-weight: 600; color: var(--white); }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--dark2);
-    border-top: 1px solid rgba(255,255,255,0.07);
-    padding: 2rem;
-    text-align: center;
-  }
-  footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); line-height: 1.8; }
-  footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
-  footer a:hover { color: var(--white); }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 768px) {
-    nav { padding: 0 1rem; }
-    .nav-links { display: none; }
-    .hero { padding: 4rem 1.25rem 3.5rem; }
-    .hero-stats { gap: 2rem; }
-    section { padding: 3.5rem 1.25rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .about-map { min-height: 240px; }
-    .trust-bar { gap: 1.25rem; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    * { transition: none !important; animation: none !important; }
-  }
-</style>
+<link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">A<span>Techno</span> Hub</a>
+  <a href="index.html" class="nav-logo">A<span>Techno</span> Hub</a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="calculators.html">Calculators</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#areas">Areas</a></li>
     <li><a href="#reviews">Reviews</a></li>
@@ -507,6 +103,19 @@
           <span class="tag">Fast Install</span>
           <span class="tag">Affordable</span>
         </div>
+      </div>
+
+      <div class="service-card amber">
+        <div class="service-icon amber">🧮</div>
+        <h3>Free Financial Calculators</h3>
+        <p>Plan your money while you're here. Use our free Income Tax, Pension, Retirement and SIP calculators — built for Pakistan, no sign-up required.</p>
+        <div class="service-tags">
+          <span class="tag">Income Tax</span>
+          <span class="tag">Pension</span>
+          <span class="tag">Retirement</span>
+          <span class="tag">SIP</span>
+        </div>
+        <a href="calculators.html" class="card-link" style="margin-top:1rem;">Open Calculators →</a>
       </div>
 
     </div>
@@ -646,7 +255,8 @@
     <strong style="color:rgba(255,255,255,0.7);">ATechno Hub</strong> — Pumpwala Bazar, Ferozwala Shadara, Lahore, Punjab, Pakistan<br/>
     📞 <a href="tel:+923017003354">+92 301 700 3354</a> &nbsp;|&nbsp;
     <a href="https://wa.me/923017003354" target="_blank">WhatsApp</a> &nbsp;|&nbsp;
-    <a href="https://maps.google.com/?q=Pumpwala+Bazar+Ferozwala+Shadara+Lahore" target="_blank">Google Maps</a><br/><br/>
+    <a href="https://maps.google.com/?q=Pumpwala+Bazar+Ferozwala+Shadara+Lahore" target="_blank">Google Maps</a> &nbsp;|&nbsp;
+    <a href="calculators.html">Financial Calculators</a><br/><br/>
     © 2026 ATechno Hub. All rights reserved.
   </p>
 </footer>

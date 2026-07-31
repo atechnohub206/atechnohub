@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Retirement Calculator Pakistan | ATechno Hub</title>
+<meta name="description" content="Project your retirement savings growth and estimated monthly retirement income based on your age, current savings, monthly contributions and expected return." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">A<span>Techno</span> Hub</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="calculators.html" class="active">Calculators</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#areas">Areas</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/923017003354" target="_blank" class="nav-cta">💬 WhatsApp Us</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="sep">/</span>
+    <a href="calculators.html">Calculators</a><span class="sep">/</span>
+    <span class="current">Retirement</span>
+  </div>
+  <h1>Retirement Calculator</h1>
+  <p>Project how much your savings could grow to by retirement, and what that might mean for your monthly income.</p>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section">
+  <div class="container calc-layout">
+
+    <div class="calc-card">
+      <h2>Enter Your Details</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="currentAge">Current Age</label>
+          <input type="number" id="currentAge" placeholder="e.g. 30" min="18" max="70" value="30" />
+        </div>
+        <div class="form-group">
+          <label for="retireAge">Retirement Age</label>
+          <input type="number" id="retireAge" placeholder="e.g. 60" min="19" max="75" value="60" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="currentSavings">Current Savings (PKR)</label>
+        <input type="number" id="currentSavings" placeholder="e.g. 500000" min="0" value="500000" />
+      </div>
+
+      <div class="form-group">
+        <label for="monthlyContribution">Monthly Contribution (PKR)</label>
+        <input type="number" id="monthlyContribution" placeholder="e.g. 15000" min="0" value="15000" />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expectedReturn">Expected Annual Return (%)</label>
+          <input type="number" id="expectedReturn" placeholder="e.g. 12" min="0" max="30" step="0.1" value="12" />
+        </div>
+        <div class="form-group">
+          <label for="retirementYears">Years in Retirement</label>
+          <input type="number" id="retirementYears" placeholder="e.g. 20" min="1" max="40" value="20" />
+        </div>
+      </div>
+
+      <button class="calc-btn" id="calcBtn">Calculate Retirement Plan</button>
+
+      <div class="disclaimer-box">
+        ⚠️ This is a simplified projection assuming a constant rate of return, for general planning only — it doesn't account for inflation, taxes or fund charges. For a detailed, fund-specific projection, try the
+        <a href="https://www.almeezangroup.com/financial-calculators/mtpf-calculator/" target="_blank" rel="noopener">Al Meezan MTPF calculator</a>.
+      </div>
+    </div>
+
+    <div class="result-card">
+      <h2>Your Projection</h2>
+      <div class="result-hero">
+        <div class="lbl">Savings at Retirement</div>
+        <div class="val" id="rCorpus">PKR 0</div>
+      </div>
+      <div class="result-grid">
+        <div class="result-row"><span class="k">Years to Retirement</span><span class="v" id="rYearsLeft">0</span></div>
+        <div class="result-row"><span class="k">Total You Contribute</span><span class="v" id="rTotalContrib">PKR 0</span></div>
+        <div class="result-row"><span class="k">Growth from Returns</span><span class="v" id="rGrowth">PKR 0</span></div>
+        <div class="result-row"><span class="k">Est. Monthly Retirement Income</span><span class="v" id="rMonthlyIncome">PKR 0</span></div>
+      </div>
+      <div class="bar-chart">
+        <div class="bar-row">
+          <div class="bar-label"><span>Your Contributions</span><span id="barContribLbl">0%</span></div>
+          <div class="bar-track"><div class="bar-fill invested" id="barContrib" style="width:50%"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-label"><span>Investment Growth</span><span id="barGrowthLbl">0%</span></div>
+          <div class="bar-track"><div class="bar-fill returns" id="barGrowth" style="width:50%"></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="calc-info">
+  <div class="container">
+    <span class="section-label">Good to Know</span>
+    <h2 class="section-title">How This Projection Works</h2>
+    <div class="calc-info-grid">
+      <div class="info-card">
+        <h3>Compounding</h3>
+        <p>Your current savings and monthly contributions grow at your expected annual return, compounded monthly until retirement.</p>
+      </div>
+      <div class="info-card">
+        <h3>Drawdown Estimate</h3>
+        <p>Your retirement corpus is then spread evenly across your chosen number of retirement years to estimate a monthly income.</p>
+      </div>
+      <div class="info-card">
+        <h3>Adjust and Compare</h3>
+        <p>Try different contribution amounts or return assumptions to see how they change your projected retirement income.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section id="contact">
+  <div class="container">
+    <span class="section-label">More Tools</span>
+    <h2 class="section-title">Explore Other Calculators</h2>
+    <p class="section-sub">Plan your income tax, pension and SIP investments too.</p>
+    <a href="calculators.html" class="btn-primary" style="font-size:1.05rem; padding:1rem 2.5rem;">🧮 View All Calculators</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <strong style="color:rgba(255,255,255,0.7);">ATechno Hub</strong> — Pumpwala Bazar, Ferozwala Shadara, Lahore, Punjab, Pakistan<br/>
+    📞 <a href="tel:+923017003354">+92 301 700 3354</a> &nbsp;|&nbsp;
+    <a href="index.html">Home</a> &nbsp;|&nbsp;
+    <a href="calculators.html">All Calculators</a><br/><br/>
+    © 2026 ATechno Hub. All rights reserved. Estimates only — not financial advice.
+  </p>
+</footer>
+
+<script src="assets/calc-utils.js"></script>
+<script>
+  function calculate() {
+    const currentAge = parseFloat(document.getElementById('currentAge').value) || 0;
+    const retireAge = parseFloat(document.getElementById('retireAge').value) || 0;
+    const currentSavings = parseFloat(document.getElementById('currentSavings').value) || 0;
+    const monthlyContribution = parseFloat(document.getElementById('monthlyContribution').value) || 0;
+    const annualReturn = (parseFloat(document.getElementById('expectedReturn').value) || 0) / 100;
+    const retirementYears = parseFloat(document.getElementById('retirementYears').value) || 1;
+
+    const yearsLeft = Math.max(retireAge - currentAge, 0);
+    const months = yearsLeft * 12;
+    const i = annualReturn / 12;
+
+    // Future value of current lump sum
+    const fvLumpSum = currentSavings * Math.pow(1 + i, months);
+
+    // Future value of monthly contributions (ordinary annuity)
+    let fvContrib = 0;
+    if (i > 0) {
+      fvContrib = monthlyContribution * ((Math.pow(1 + i, months) - 1) / i);
+    } else {
+      fvContrib = monthlyContribution * months;
+    }
+
+    const corpus = fvLumpSum + fvContrib;
+    const totalContrib = currentSavings + (monthlyContribution * months);
+    const growth = corpus - totalContrib;
+    const monthlyIncome = corpus / (retirementYears * 12);
+
+    document.getElementById('rCorpus').textContent = pkr(corpus);
+    document.getElementById('rYearsLeft').textContent = yearsLeft;
+    document.getElementById('rTotalContrib').textContent = pkr(totalContrib);
+    document.getElementById('rGrowth').textContent = pkr(Math.max(growth, 0));
+    document.getElementById('rMonthlyIncome').textContent = pkr(monthlyIncome);
+
+    const contribPct = corpus > 0 ? clamp((totalContrib / corpus) * 100, 0, 100) : 50;
+    const growthPct = 100 - contribPct;
+    document.getElementById('barContrib').style.width = contribPct + '%';
+    document.getElementById('barGrowth').style.width = growthPct + '%';
+    document.getElementById('barContribLbl').textContent = pct(contribPct, 0);
+    document.getElementById('barGrowthLbl').textContent = pct(growthPct, 0);
+  }
+
+  document.getElementById('calcBtn').addEventListener('click', calculate);
+  ['currentAge','retireAge','currentSavings','monthlyContribution','expectedReturn','retirementYears'].forEach(id => {
+    document.getElementById(id).addEventListener('keyup', e => { if (e.key === 'Enter') calculate(); });
+  });
+  calculate();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pension Calculator Pakistan | ATechno Hub</title>
+<meta name="description" content="Estimate your government gross monthly pension and commuted lump sum based on last pay drawn, years of service and commutation percentage." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">A<span>Techno</span> Hub</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="calculators.html" class="active">Calculators</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#areas">Areas</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/923017003354" target="_blank" class="nav-cta">💬 WhatsApp Us</a>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span class="sep">/</span>
+    <a href="calculators.html">Calculators</a><span class="sep">/</span>
+    <span class="current">Pension</span>
+  </div>
+  <h1>Pension Calculator</h1>
+  <p>Estimate your gross monthly pension and commuted lump sum using the standard government pension formula.</p>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section">
+  <div class="container calc-layout">
+
+    <div class="calc-card">
+      <h2>Enter Your Details</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="lastPay">Last Basic Pay Drawn (PKR/month)</label>
+          <input type="number" id="lastPay" placeholder="e.g. 80000" min="0" />
+        </div>
+        <div class="form-group">
+          <label for="yearsService">Years of Service</label>
+          <input type="number" id="yearsService" placeholder="e.g. 30" min="0" max="40" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="commutePct">Commutation %</label>
+          <input type="number" id="commutePct" placeholder="e.g. 35" min="0" max="35" value="35" />
+          <div class="hint">Max allowed is usually 35% of gross pension.</div>
+        </div>
+        <div class="form-group">
+          <label for="commuteFactor">Commutation Factor</label>
+          <input type="number" id="commuteFactor" placeholder="e.g. 9.87" min="0" step="0.01" value="9.87" />
+          <div class="hint">Varies by age at retirement — check the official table.</div>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="calcBtn">Calculate Pension</button>
+
+      <div class="disclaimer-box">
+        ⚠️ This uses the common approximation <strong>Gross Pension = (7 × Years of Service × Last Pay) / 300</strong>, capped at 75% of last pay, and a commutation factor you can adjust. Rules vary by province/department and your exact commutation factor depends on your age at retirement. For an authoritative figure, use the
+        <a href="https://www.agkhyberpakhtunkhwa.gov.pk/pencalc/pencalc2.html" target="_blank" rel="noopener">official AG KP pension calculator</a>.
+      </div>
+    </div>
+
+    <div class="result-card">
+      <h2>Your Result</h2>
+      <div class="result-hero">
+        <div class="lbl">Net Monthly Pension (after commutation)</div>
+        <div class="val" id="rNetPension">PKR 0</div>
+      </div>
+      <div class="result-grid">
+        <div class="result-row"><span class="k">Gross Monthly Pension</span><span class="v" id="rGrossPension">PKR 0</span></div>
+        <div class="result-row"><span class="k">Commuted Monthly Pension</span><span class="v" id="rCommutedMonthly">PKR 0</span></div>
+        <div class="result-row"><span class="k">Commuted Lump Sum</span><span class="v" id="rLumpSum">PKR 0</span></div>
+        <div class="result-row"><span class="k">Annual Net Pension</span><span class="v" id="rAnnualPension">PKR 0</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INFO -->
+<section class="calc-info">
+  <div class="container">
+    <span class="section-label">Good to Know</span>
+    <h2 class="section-title">How Pension & Commutation Work</h2>
+    <div class="calc-info-grid">
+      <div class="info-card">
+        <h3>Gross Pension Formula</h3>
+        <p>A common rule of thumb: 7 × years of service × last basic pay ÷ 300, capped at 75% of your last pay drawn.</p>
+      </div>
+      <div class="info-card">
+        <h3>Commutation</h3>
+        <p>You can convert part of your monthly pension (commonly up to 35%) into a one-time lump sum, calculated as commuted monthly pension × 12 × a commutation factor.</p>
+      </div>
+      <div class="info-card">
+        <h3>Commutation Factor</h3>
+        <p>This factor is set by an official table based on your age at retirement. It typically ranges roughly between 8 and 11 — check the official calculator for your exact value.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section id="contact">
+  <div class="container">
+    <span class="section-label">More Tools</span>
+    <h2 class="section-title">Explore Other Calculators</h2>
+    <p class="section-sub">Plan your income tax, retirement savings and SIP investments too.</p>
+    <a href="calculators.html" class="btn-primary" style="font-size:1.05rem; padding:1rem 2.5rem;">🧮 View All Calculators</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <strong style="color:rgba(255,255,255,0.7);">ATechno Hub</strong> — Pumpwala Bazar, Ferozwala Shadara, Lahore, Punjab, Pakistan<br/>
+    📞 <a href="tel:+923017003354">+92 301 700 3354</a> &nbsp;|&nbsp;
+    <a href="index.html">Home</a> &nbsp;|&nbsp;
+    <a href="calculators.html">All Calculators</a><br/><br/>
+    © 2026 ATechno Hub. All rights reserved. Estimates only — confirm with your pension department.
+  </p>
+</footer>
+
+<script src="assets/calc-utils.js"></script>
+<script>
+  function calculate() {
+    const lastPay = parseFloat(document.getElementById('lastPay').value) || 0;
+    const years = clamp(parseFloat(document.getElementById('yearsService').value) || 0, 0, 40);
+    const commutePct = clamp(parseFloat(document.getElementById('commutePct').value) || 0, 0, 35) / 100;
+    const factor = parseFloat(document.getElementById('commuteFactor').value) || 0;
+
+    let grossPension = (7 * years * lastPay) / 300;
+    const cap = lastPay * 0.75;
+    if (grossPension > cap) grossPension = cap;
+
+    const commutedMonthly = grossPension * commutePct;
+    const netMonthly = grossPension - commutedMonthly;
+    const lumpSum = commutedMonthly * 12 * factor;
+    const annualPension = netMonthly * 12;
+
+    document.getElementById('rNetPension').textContent = pkr(netMonthly);
+    document.getElementById('rGrossPension').textContent = pkr(grossPension);
+    document.getElementById('rCommutedMonthly').textContent = pkr(commutedMonthly);
+    document.getElementById('rLumpSum').textContent = pkr(lumpSum);
+    document.getElementById('rAnnualPension').textContent = pkr(annualPension);
+  }
+
+  document.getElementById('calcBtn').addEventListener('click', calculate);
+  ['lastPay','yearsService','commutePct','commuteFactor'].forEach(id => {
+    document.getElementById(id).addEventListener('keyup', e => { if (e.key === 'Enter') calculate(); });
+  });
+  calculate();
+</script>
+
+</body>
+</html>
