@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -70,8 +70,7 @@
       <button class="calc-btn" id="calcBtn">Calculate Pension</button>
 
       <div class="disclaimer-box">
-        ⚠️ This uses the common approximation <strong>Gross Pension = (7 × Years of Service × Last Pay) / 300</strong>, capped at 75% of last pay, and a commutation factor you can adjust. Rules vary by province/department and your exact commutation factor depends on your age at retirement. For an authoritative figure, use the
-        <a href="https://www.agkhyberpakhtunkhwa.gov.pk/pencalc/pencalc2.html" target="_blank" rel="noopener">official AG KP pension calculator</a>.
+        ⚠️ This uses the common approximation <strong>Gross Pension = (7 × Years of Service × Last Pay) / 300</strong>, capped at 75% of last pay, and a commutation factor you can adjust. Rules vary by province/department and your exact commutation factor depends on your age at retirement.
       </div>
     </div>
 
@@ -135,7 +134,7 @@
   </p>
 </footer>
 
-<script src="assets/calc-utils.js"></script>
+<script src="calc-utils.js"></script>
 <script>
   function calculate() {
     const lastPay = parseFloat(document.getElementById('lastPay').value) || 0;
